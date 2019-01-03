@@ -1,0 +1,17 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background: purple;
+}
+
+.container{
+    height: 330px;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: darkcyan;
+    padding: 20px;
+    border: 1px solid #08038C;
+    box-shadow: 0 0 8px 3px #fff;
+}
