@@ -24,10 +24,11 @@ body {
   color: #08038c;
 }
 
-.question: {
+.question{
+    display: contents;
   padding: 20px;
   font-size: 22px;
-  background: darkblue;
+  background: darkcyan;
   border-radius: 20px;
   margin: 10px 0 10px 0;
   color: #f6f6f6;
