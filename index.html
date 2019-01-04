@@ -1,24 +1,36 @@
 <!DOCTYPE HMTL>
 <html>
-    <head>
-        <title>Trivia Game</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link href="assets/css/style.css" rel="stylesheet">
-    </head>
-    <body>
-        <div id="quizContainer" class="container">
-            <div class="title">Trivia Game</div>
-            <div id="question" class="question">
-            <label class="option"><input type="radio" name="option" value="1" /> <span id="op1"></span></label>
-            <label class="option"><input type="radio" name="option" value="2" /> <span id="op2"></span></label>
-            <label class="option"><input type="radio" name="option" value="3" /> <span id="op3"></span></label>
-            <label class="option"><input type="radio" name="option" value="4" /> <span id="op4"></span></label>
-            <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">Next Question</button>
-            </div>
-            <div id="result" class="result container" style="display:none;">
-            </div>
-        </div>
-        <script src="assets/javascript/TriviaQs.js"></script>
-        <script src="assets/javascript/app.js"></script>
-    </body>
+  <head>
+    <title>Trivia Game</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="quizContainer" class="container">
+      <div class="title">Trivia Game</div>
+      <div id="question" class="question">
+        <label class="option"
+          ><input type="radio" name="option" value="1"/> <span id="op1"></span
+        ></label>
+        <label class="option"
+          ><input type="radio" name="option" value="2"/> <span id="op2"></span
+        ></label>
+        <label class="option"
+          ><input type="radio" name="option" value="3"/> <span id="op3"></span
+        ></label>
+        <label class="option"
+          ><input type="radio" name="option" value="4"/> <span id="op4"></span
+        ></label>
+        <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">
+          Next Question
+        </button>
+      </div>
+      <div id="result" class="result container" style="display:none;"></div>
+    </div>
+    <script src="assets/javascript/TriviaQs.js"></script>
+    <script src="assets/javascript/app.js"></script>
+  </body>
 </html>
