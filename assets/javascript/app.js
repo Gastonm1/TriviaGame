@@ -12,9 +12,18 @@ var op4 = document.getElementById("op4");
 var nxtButton = document.getElementById("nextButton");
 var resultCont = document.getElementById("result");
 
+//============================Pseudo Code=============================
+// Make an array of questions to pull from.
+// Load questions via index into proper container.
+// Allow user click on option.
+// Check if user answer is correct.
+// If correct, increase the score.
+// Make timer for each question. Maybe 15 seconds?
+// Show total amount of correct questions at end of game.
+// Celebrate when complete.
 //============================Game Operations=========================
 
-function loadQuestion(questionIndex) {
+function loadQuestion (questionIndex) {
   var q = questions[questionIndex]; // Pulls from the questions from TriviaQs via the index position
   gameQuestion.textContent = (questionIndex + 1) + '. ' + q.question;
   opt1.textContent = q.option1;
