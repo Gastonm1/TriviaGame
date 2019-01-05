@@ -1,6 +1,6 @@
 body {
   font-family: "Roboto", sans-serif;
-  background: darkblue;
+  background: darkred;
 }
 
 .container {
@@ -10,10 +10,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  background: darkcyan;
+  background: black;
   padding: 20px;
-  border: 1px solid #08038c;
-  box-shadow: 0 0 8px 3px #fff;
+  border: 1px solid gold;
+  box-shadow: 0 0 8px 3px gold;
 }
 
 .title {
@@ -21,14 +21,14 @@ body {
   text-align: center;
   font-size: 36px;
   text-transform: uppercase;
-  color: #08038c;
+  color: white;
 }
 
 .question {
   display: contents;
   padding: 20px;
   font-size: 22px;
-  background: darkcyan;
+  background: gold;
   border-radius: 20px;
   margin: 10px 0 10px 0;
   color: #f6f6f6;
@@ -46,7 +46,7 @@ body {
 }
 
 .option:hover {
-  background: #08038c;
+  background: gold;
   color: #f6f6f6;
 }
 

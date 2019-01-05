@@ -25,13 +25,13 @@ var resultCont = document.getElementById("result");
 //============================Game Operations=========================
 
 function loadQuestion(questionIndex) {
-  var q = questions[questionIndex]; // Pulls from the questions from TriviaQs via the index position
-  gameQuestion.textContent = questionIndex + 1 + ". " + q.question;
+  var q = questions[questionIndex]; 
+  gameQuestion.textContent = (questionIndex + 1) + ". " + q.question;
   op1.textContent = q.option1;
   op2.textContent = q.option2;
   op13.textContent = q.option3;
   op4.textContent = q.option4;
-}
+}; // Pulls from the questions from TriviaQs via the index position
 
 function loadNextQuestion() {
   var selectedOption = document.querySelector("input[type=radio]:checked");
