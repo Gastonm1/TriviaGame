@@ -21,15 +21,16 @@ var resultCont = document.getElementById("result");
 // Make timer for each question. Maybe 15 seconds?
 // Show total amount of correct questions at end of game.
 // Celebrate when complete.
+
 //============================Game Operations=========================
 
-function loadQuestion (questionIndex) {
+function loadQuestion(questionIndex) {
   var q = questions[questionIndex]; // Pulls from the questions from TriviaQs via the index position
-  gameQuestion.textContent = (questionIndex + 1) + '. ' + q.question;
-  opt1.textContent = q.option1;
-  opt2.textContent = q.option2;
-  opt13.textContent = q.option3;
-  opt4.textContent = q.option4;
+  gameQuestion.textContent = questionIndex + 1 + ". " + q.question;
+  op1.textContent = q.option1;
+  op2.textContent = q.option2;
+  op13.textContent = q.option3;
+  op4.textContent = q.option4;
 }
 
 function loadNextQuestion() {
