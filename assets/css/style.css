@@ -16,6 +16,11 @@ body {
   box-shadow: 0 0 8px 3px gold;
 }
 
+#logo{
+  display: flex;
+  justify-content: space-between;
+}
+
 .title {
   padding-top: 20px;
   text-align: center;
