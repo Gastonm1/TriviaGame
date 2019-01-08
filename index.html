@@ -10,30 +10,30 @@
   </head>
   <body>
     <div id="logo">
-      <img src="assets/images/Logo.svg">
-      <img src="assets/images/Logo.svg">
+      <img src="assets/images/Logo.svg" /> <img src="assets/images/Logo.svg" />
     </div>
     <div id="quizContainer" class="container">
       <div class="title">Entertainment Trivia</div>
+      <p id="timer"></p>
       <div id="question" class="question"></div>
-        <label class="option"
-          ><input type="radio" name="option" value="1"/> <span id="op1"></span
-        ></label>
-        <label class="option"
-          ><input type="radio" name="option" value="2"/> <span id="op2"></span
-        ></label>
-        <label class="option"
-          ><input type="radio" name="option" value="3"/> <span id="op3"></span
-        ></label>
-        <label class="option"
-          ><input type="radio" name="option" value="4"/> <span id="op4"></span
-        ></label>
-        <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">
-          Next Question
-        </button>
-      </div>
-      <div id="result" class="result container" style="display:none;"></div>
+      <br />
+      <label class="option"
+        ><input type="radio" name="option" value="1"/> <span id="op1"></span
+      ></label>
+      <label class="option"
+        ><input type="radio" name="option" value="2"/> <span id="op2"></span
+      ></label>
+      <label class="option"
+        ><input type="radio" name="option" value="3"/> <span id="op3"></span
+      ></label>
+      <label class="option"
+        ><input type="radio" name="option" value="4"/> <span id="op4"></span
+      ></label>
+      <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">
+        Next Question
+      </button>
     </div>
+    <div id="result"></div>
     <script src="assets/javascript/TriviaQs.js"></script>
     <script src="assets/javascript/app.js"></script>
   </body>

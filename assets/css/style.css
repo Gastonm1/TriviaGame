@@ -16,7 +16,7 @@ body {
   box-shadow: 0 0 8px 3px gold;
 }
 
-#logo{
+#logo {
   display: flex;
   justify-content: space-between;
 }
@@ -27,6 +27,10 @@ body {
   font-size: 36px;
   text-transform: uppercase;
   color: white;
+}
+
+#timer {
+  color: #f6f6f6;
 }
 
 .question {
@@ -72,10 +76,11 @@ body {
   color: #f6f6f6;
 }
 
-.result {
+#result {
   height: 100px;
   text-align: center;
   font-size: 75px;
+  color: #f6f6f6;
 }
 
 .option input:check .option {

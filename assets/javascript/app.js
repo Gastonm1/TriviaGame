@@ -24,21 +24,23 @@ var resultCont = document.getElementById("result");
 
 //============================Game Operations=========================
 
-function loadQuestion (questionIndex) { 
-  var q = questions[questionIndex]; 
-  gameQuestion.textContent = (questionIndex + 1) + ". " + q.question;
+function loadQuestion(questionIndex) {
+  index = Math.floor(Math.random() * questionIndex.length);
+  var q = questions[questionIndex];
+  gameQuestion.textContent = questionIndex + 1 + ". " + q.question;
   op1.textContent = q.option1;
   op2.textContent = q.option2;
-  op13.textContent = q.option3;
+  op3.textContent = q.option3;
   op4.textContent = q.option4;
-}; // Pulls from the questions from TriviaQs via the index position
+} // Pulls from the questions from TriviaQs via the index position
 
 function loadNextQuestion() {
   var selectedOption = document.querySelector("input[type=radio]:checked");
-  if(!selectedOption) {
+  if (!selectedOption) {
     alert("Please select your answer!");
     return;
   } // Checking if option is selected by user// Radio buttons let user pick only one from the limited number of choices.
+
   var answer = selectedOption.value;
   if (questions[currentQuestion].answer == answer) {
     score += 1;
@@ -46,17 +48,17 @@ function loadNextQuestion() {
   selectedOption.checked = false;
   currentQuestion++;
   if (currentQuestion == totalQuestions - 1) {
-    nxtButton.textContent = "Last Question!";
+    nxtButton.textContent = "Finish!";
   } // if the game is about to be over then this should show on the button indicating to the user that this is the last question.
   if (currentQuestion == totalQuestions) {
-    container.style.display = "none";
-    resultCont.style.display = " ";
-    resultCont.textContent = "Your score" + score;
+    container.style.display = "none"; // Will hide the quiz Container
+    resultCont.style.display = " "; // Will show the result container
+    resultCont.textContent = "Your score: " + score;
     return;
-  } //Showing the Final score
+  } //Displays the Final score
   loadQuestion(currentQuestion);
 }
 
 //===========================Game Start =========================================
 
-loadQuestion(gameQuestion);
+loadQuestion(currentQuestion);
