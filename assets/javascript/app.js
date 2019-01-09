@@ -1,8 +1,8 @@
 //===========================Global Variables========================
 var currentQuestion = 0;
 var score = 0;
+var incorrectAnswer = 0;
 var totalQuestions = questions.length;
-
 var container = document.getElementById("quizContainer");
 var gameQuestion = document.getElementById("question");
 var op1 = document.getElementById("op1");
@@ -25,7 +25,7 @@ var resultCont = document.getElementById("result");
 //============================Game Operations=========================
 
 function loadQuestion(questionIndex) {
-  index = Math.floor(Math.random() * questionIndex.length);
+
   var q = questions[questionIndex];
   gameQuestion.textContent = questionIndex + 1 + ". " + q.question;
   op1.textContent = q.option1;
@@ -62,3 +62,12 @@ function loadNextQuestion() {
 //===========================Game Start =========================================
 
 loadQuestion(currentQuestion);
+function timerstart() {
+  $("#timer").html ("<h3>Time remaining: " + timer + "</h3>")
+  timer --;
+
+  if (timer === 0) {
+      incorrectAnswer++;
+      stop();
+  }
+}

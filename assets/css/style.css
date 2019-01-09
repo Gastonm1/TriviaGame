@@ -3,8 +3,21 @@ body {
   background: darkred;
 }
 
-.container {
+#startgame {
   height: 230px;
+  width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: black;
+  padding: 20px;
+  border: 1px solid gold;
+  box-shadow: 0 0 8px 3px gold;
+}
+
+.container {
+  height: 250px;
   width: 1000px;
   position: absolute;
   top: 50%;
@@ -31,6 +44,8 @@ body {
 
 #timer {
   color: #f6f6f6;
+  text-align: center;
+  font-size: 20px;
 }
 
 .question {
