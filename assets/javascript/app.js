@@ -2,6 +2,7 @@
 var currentQuestion = 0;
 var score = 0;
 var interval;
+var timer = document.getElementById("jstimer");
 var incorrectAnswer = 0;
 var totalQuestions = questions.length;
 var container = document.getElementById("quizContainer");
@@ -25,25 +26,23 @@ var resultCont = document.getElementById("result");
 
 //============================Game Operations=========================
 
-function countdown() {
-  clearInterval(interval);
-  interval = setInterval(function() {
-    var timer = $(".jstimer").html();
-    timer = timer.split(":");
-    var minutes = timer[0];
-    var seconds = timer[1];
-    seconds -= 1;
-    if (minutes < 0) return;
-    else if (seconds < 0 && minutes != 0) {
-      minutes -= 1;
-      seconds = 59;
-    } else if (seconds < 10 && length.seconds != 2) seconds = "0" + seconds;
-
-    $(".jstimer").html(minutes + ":" + seconds);
-
-    if (minutes == 0 && seconds == 0) clearInterval(interval);
-  }, 1000);
-}
+var timer2 = "5:01";
+var interval = setInterval(function() {
+  var timer = timer2.split(":");
+  //by parsing integer, I avoid all extra string processing
+  var minutes = parseInt(timer[0], 10);
+  var seconds = parseInt(timer[1], 10);
+  --seconds;
+  minutes = seconds < 0 ? --minutes : minutes;
+  seconds = seconds < 0 ? 59 : seconds;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+  //minutes = (minutes < 10) ?  minutes : minutes;
+  $("#jstimer").html(minutes + ":" + seconds);
+  if (minutes < 0) clearInterval(interval);
+  //check if both minutes and seconds are 0
+  if (seconds <= 0 && minutes <= 0) clearInterval(interval);
+  timer2 = minutes + ":" + seconds;
+}, 1000);
 
 function loadQuestion(questionIndex) {
   var q = questions[questionIndex];
@@ -73,7 +72,7 @@ function loadNextQuestion() {
   if (currentQuestion == totalQuestions) {
     container.style.display = "none"; // Will hide the quiz Container
     resultCont.style.display = " "; // Will show the result container
-    resultCont.textContent = "Your score: " + score;
+    resultCont.textContent = "Your score: " + score + "/10";
     return;
   } //Displays the Final score
   loadQuestion(currentQuestion);
